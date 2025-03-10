@@ -17,7 +17,11 @@ function fetchCountryInfo(countryName) {
         .then(data => {
             if (data.status === 404) {
                 countryTitle.textContent = "Country not found";
-               
+                capitalElem.textContent = "";
+                regionElem.textContent = "";
+                populationElem.textContent = "";
+                countryFlag.src = null;
+                neighborsList.innerHTML = "";
                 return;
             }
 
